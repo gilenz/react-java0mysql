@@ -22,11 +22,11 @@ spec:
         ports:
         - containerPort: 3306
       - name: backend
-        image: gilni/java-backend:v1
+        image: gilni/java-backend
         ports:
         - containerPort: 8080
       - name: frontend
-        image: gilni/java-frontend:v1
+        image: gilni/java-frontend
         ports:
         - containerPort: 3000
 ---
