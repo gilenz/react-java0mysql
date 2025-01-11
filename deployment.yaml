@@ -27,7 +27,7 @@ spec:
         - containerPort: 8080
       - name: frontend
         image: gilni/java-frontend
-        ports:ss
+        ports:
         - containerPort: 3000
 ---
 apiVersion: v1
