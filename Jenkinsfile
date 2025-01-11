@@ -28,7 +28,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'docker_creds', passwordVariable: 'docker_pass', usernameVariable: 'docker_username')]) {
-                    sh "docker login -u ${docker_username} -p ${docker_pass}"
+                    sh ("docker login -u ${docker_username} -p ${docker_pass}")
                     sh "docker push gilni/java-backend:v${BUILD_ID}"
                     sh "docker push gilni/java-frontend:v${BUILD_ID}"
                     
