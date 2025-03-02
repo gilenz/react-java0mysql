@@ -15,8 +15,13 @@ jobs:
       -
         name: Set up Docker Compose
         uses: docker/setup-compose-action@v1
+      - name: run containers
       - run: | 
           docker compose up -d
           docker ps
           docker images
+      - name: Run tests
+      - run: |
+          docker exec react-java0mysql-frontend-1 curl localhost:3000
+          docker exec react-java0mysql-backend-1 curl localhost:8080
         
