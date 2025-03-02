@@ -23,4 +23,10 @@ jobs:
         run: |
           docker exec react-java0mysql-frontend-1 curl localhost:3000
           docker exec react-java0mysql-backend-1 curl localhost:8080
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: ./frontend
+          push: true
+          tags: gilni/java-frontend:latest
         
