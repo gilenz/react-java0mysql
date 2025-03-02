@@ -20,7 +20,7 @@ jobs:
           docker ps
           docker images
       - name: Run tests
-      - run: |
+        run: |
           docker exec react-java0mysql-frontend-1 curl localhost:3000
           docker exec react-java0mysql-backend-1 curl localhost:8080
       - name: Build and push
