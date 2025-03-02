@@ -12,3 +12,7 @@ jobs:
         with:
           username: ${{ vars.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASS }}
+      -
+        name: Set up Docker Compose
+        uses: docker/setup-compose-action@v1
+      - run: docker compose up -d
